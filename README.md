@@ -1,3 +1,13 @@
+```
+ ___                     _                _
+|_ _| _ __   ___  _ __  | |__   __ _  ___| | __
+ | | | '__| / _ \| '_ \ | '_ \ / _` |/ __| |/ /
+ | | | |   | (_) | | | || | | | (_| | (__|   <
+|___||_|    \___/|_| |_||_| |_|\__,_|\___|_|\_\
+
+      Circle Agency Website Mid-Term Project
+```
+
 # Circle Agency Website
 
 A fully responsive website for Circle, a digital design agency, built with HTML, CSS, and JavaScript.
@@ -35,7 +45,11 @@ This project is a multi-page website for Circle, featuring:
 
 - **HTML5**: Semantic markup for structure
 - **CSS3**: Styling with flexbox for layout
-- **JavaScript**: DOM manipulation and form validation
+- **JavaScript**:
+  - DOM manipulation and form validation
+  - Fetch API for retrieving project data
+  - Dynamic content creation
+- **External API**: Projects data from Ironhack API
 - **Git**: Version control
 - **Netlify**: Deployment platform
 
@@ -52,18 +66,21 @@ The site is deployed on Netlify and can be accessed at [your-netlify-url].
 
 ```
 ├── index.html          # Homepage
-├── projects.html       # Projects page
+├── projects/
+│   └── 1.html          # Project detail page for project with UUID 1
 ├── services.html       # Services page
 ├── contact.html        # Contact page
 ├── 404.html            # Custom 404 error page
-├── styles/
-│   ├── styles.css      # Main stylesheet
-│   ├── projects.css    # Projects page styles
-│   ├── services.css    # Services page styles
-│   ├── contact.css     # Contact page styles
-│   └── footer.css      # Footer styles (shared across pages)
-├── scripts/
-│   └── scripts.js      # JavaScript functionality
+├── Styles/
+│   └── styles.css      # Main stylesheet
+├── js/
+│   ├── main.js         # Main JavaScript functionality
+│   ├── projects.js     # Project fetching and display functionality
+│   ├── form-validation.js # Form validation functionality
+│   └── menu.js         # Responsive menu functionality
+├── assets/
+│   ├── logos/          # Logo images
+│   └── images/         # Site images
 └── README.md           # Project documentation
 ```
 
@@ -75,11 +92,26 @@ The site is deployed on Netlify and can be accessed at [your-netlify-url].
 
 ## JavaScript Functionality
 
-- **Form Validation**: Validates contact and subscription forms
-- **Dynamic Copyright Year**: Automatically updates the year in the footer
-- **Smooth Scrolling**: Provides smooth scrolling for anchor links
-- **Animation on Scroll**: Animates elements as they enter the viewport
-- **Responsive Menu**: Toggles mobile navigation menu
+- **API Integration**: Fetches and displays projects from an external API
+- **Project Detail Page**: Dynamically loads project details from the API
+- **Form Validation**:
+  - Validates contact and subscription forms
+  - Shows custom error message for emails containing "ironhack"
+  - Checks for valid email format
+- **Responsive Menu**: Toggles mobile navigation menu with hamburger icon
+- **Random Project Selection**: Displays random related projects on the project detail page
+- **Dynamic Form Creation**: Wraps CTA section elements in a form for proper validation
+
+## API Integration
+
+The website integrates with the Ironhack Projects API to dynamically display project information:
+
+- **API Endpoint**: `https://raw.githubusercontent.com/ironhack-javaScript/mid-term-api/main/projects`
+- **Features**:
+  - Fetches and displays the first three projects on the homepage
+  - Loads detailed information for individual projects on their respective pages
+  - Displays random related projects on the project detail pages
+  - Handles API errors gracefully with user notifications
 
 ## Future Enhancements
 
@@ -88,6 +120,8 @@ The site is deployed on Netlify and can be accessed at [your-netlify-url].
 - Dark mode toggle
 - Multi-language support
 - Performance optimizations
+- Additional project detail pages
+- Contact form submission functionality
 
 ## Credits
 
