@@ -26,6 +26,8 @@ This project is a multi-page website for Circle, featuring:
 - Fully responsive layout that works on mobile, tablet, and desktop
 - Flexbox-based layout system
 - Mobile-friendly navigation
+- Optimized contact form for all screen sizes
+- Consistent UI elements across devices
 
 ### Interactive Elements
 - Contact form with validation
@@ -86,9 +88,12 @@ The site is deployed on Netlify and can be accessed at [your-netlify-url].
 
 ## Responsive Breakpoints
 
-- Mobile: Up to 767px
+- Extra Small Mobile: Up to 375px
+- Mobile: 376px to 767px
 - Tablet: 768px to 1023px
 - Desktop: 1024px and above
+
+Each breakpoint has specific optimizations for layout, typography, and interactive elements.
 
 ## JavaScript Functionality
 
@@ -113,6 +118,17 @@ The website integrates with the Ironhack Projects API to dynamically display pro
   - Displays random related projects on the project detail pages
   - Handles API errors gracefully with user notifications
 
+## Recent Updates
+
+### Contact Page Improvements (June 2024)
+- Enhanced mobile and tablet responsiveness for the contact form
+- Fixed layout issues on smaller screens
+- Improved form field spacing and sizing for better usability
+- Added proper box-sizing to prevent overflow issues
+- Optimized button styling for touch interfaces
+- Created consistent styling across all device sizes
+- Added subtle visual enhancements for better user experience
+
 ## Future Enhancements
 
 - Blog section with articles
@@ -121,11 +137,11 @@ The website integrates with the Ironhack Projects API to dynamically display pro
 - Multi-language support
 - Performance optimizations
 - Additional project detail pages
-- Contact form submission functionality
+- Contact form submission functionality with backend integration
 
 ## Credits
 
 - Design: Circle Agency
 - Development: Victor Valerio
-- Images: Ironhack resources and AI-generated images
+- Images: Ironhack resources - AI-generated images and Giphy
 - Fonts: Google Fonts (Roboto)

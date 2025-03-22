@@ -1,5 +1,5 @@
 /* Projects Page Styles */
-@import url('styles.css');
+/* styles.css is now loaded directly in the HTML */
 
 /* Override Styles for Projects Page */
 #footer-copyright {
@@ -17,7 +17,10 @@
 body {
     background-color: #FFFFFF; /* Changed from #F2F4FC to white */
     color: #292E47;
+    overflow-x: hidden;
 }
+
+/* Removed mobile menu styles to match homepage */
 
 /* Header Styles */
 header {
@@ -27,6 +30,7 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 #header-container {
@@ -36,11 +40,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 #header-left img {
     height: 30px;
 }
+
+/* Hamburger menu removed to match homepage style */
 
 #header-center ul {
     display: flex;
@@ -63,63 +70,53 @@ header {
     color: #072AC8;
 }
 
-#contact-btn {
-    background-color: #072AC8;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
+/* Mobile-specific styles moved to mobile.css */
 
-#contact-btn:hover {
-    background-color: #0522a5;
-}
+/* Contact button styles are now in styles.css */
 
 /* Hero Area */
 #hero-area {
     position: relative;
-    width: 1440px;
-    height: 1081px; /* Reduced by 100px */
-    margin: 100px auto 0; /* Added top margin of 100px */
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 80px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .hero-title {
-    position: absolute;
-    width: 530px;
-    height: 70px;
-    left: 170px;
-    top: 6px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 20px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
-    line-height: auto;
+    line-height: 1.2;
     color: #292E47;
 }
 
 .hero-subtitle {
-    position: absolute;
-    width: 530px;
-    height: 28px;
-    left: 170px;
-    top: 96px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 20px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: auto;
+    line-height: 1.5;
     color: #6B708D;
 }
 
 .hero-date {
-    position: absolute;
-    width: 255px;
-    height: 30px;
-    left: 1015px;
-    top: 94px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    text-align: right;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -129,11 +126,11 @@ header {
 }
 
 .hero-image {
-    position: absolute;
-    width: 1100px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
     height: 458px;
-    left: 170px;
-    top: 212px;
+    margin: 0 auto 40px;
     background-image: url('../images/projects-section/1.jpg');
     background-size: cover;
     background-position: center;
@@ -142,22 +139,21 @@ header {
 }
 
 #hero-area:hover .hero-image {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .hero-description {
-    position: absolute;
-    width: 1100px;
-    height: 420px;
-    left: 170px;
-    top: 702px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     color: #6B708D;
-    overflow: auto;
 }
 
 .hero-description p {
@@ -168,25 +164,27 @@ header {
 #projects-section {
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 #projects-section .container {
-    width: 1100px;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 80px auto 0;
+    padding: 0 20px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .other-projects-title {
     position: relative;
-    width: 434px;
-    height: 47px;
-    margin: -40px 0 40px; /* Changed from 60px to -40px to raise by 100px */
+    width: 100%;
+    margin: 0 0 40px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 1.2;
     color: #292E47;
 }
 
@@ -194,6 +192,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    width: 100%;
 }
 
 .project-card {
@@ -288,19 +287,23 @@ header {
 /* CTA Section */
 #cta-section {
     position: relative;
-    width: 1320px;
-    height: 500px;
-    margin: 200px auto 0 auto;
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+    min-height: 500px;
+    margin: 100px auto 0 auto;
     background: #FFC600;
     text-align: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
 }
 
 #cta-container {
-    position: absolute;
-    width: 1100px;
-    height: 227px;
-    left: calc(50% - 1100px / 2);
-    top: 136px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -381,9 +384,74 @@ header {
 /* All footer styles are now in footer.css */
 
 /* Responsive Styles */
+@media (max-width: 1440px) {
+    #hero-area {
+        width: 100%;
+        height: auto;
+        padding: 50px 20px;
+        margin: 50px auto 0;
+        position: relative;
+    }
+
+    .hero-title, .hero-subtitle, .hero-date {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto 20px;
+    }
+
+    .hero-date {
+        text-align: right;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        height: 458px;
+        left: 0;
+        top: 0;
+        margin: 0 auto 40px;
+    }
+
+    .hero-description {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        height: auto;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+
+    #projects-section .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 80px auto 0;
+        padding: 0 20px;
+    }
+
+    #cta-section {
+        width: 100%;
+        max-width: 1320px;
+        margin: 100px auto 0;
+    }
+
+    #cta-container {
+        width: 100%;
+        max-width: 1100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1200px) {
     .projects-container {
-        padding: 0 20px;
+        padding: 0;
     }
 }
 
@@ -396,91 +464,51 @@ header {
     .project-image {
         height: 250px;
     }
-}
-
-@media (max-width: 1440px) {
-    #hero-area {
-        width: 100%;
-    }
 
     .hero-image {
-        width: calc(100% - 340px);
-    }
-
-    .hero-description {
-        width: calc(100% - 340px);
-    }
-
-    .hero-date {
-        left: auto;
-        right: 170px;
-    }
-
-    #projects-section .container {
-        width: calc(100% - 340px);
-        margin-left: 170px;
+        height: 350px;
     }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 992px) {
+    #cta-section {
+        height: auto;
+        padding: 60px 20px;
+    }
+
     #cta-container {
-        width: 100%;
+        position: relative;
+        top: 0;
+        height: auto;
     }
 }
 
 @media (max-width: 768px) {
-    #header-container {
-        padding: 0 30px;
-    }
+    /* Removed custom mobile header styles to use the ones from mobile.css */
 
-    #header-center ul {
-        gap: 20px;
-    }
-
-    #hero-area {
-        height: 1100px; /* Reduced by 100px */
-    }
-
+    /* Content mobile styles */
     .hero-title {
-        left: 30px;
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .hero-subtitle {
-        left: 30px;
         font-size: 20px;
     }
 
     .hero-date {
-        left: auto;
-        right: 30px;
         font-size: 18px;
     }
 
     .hero-image {
-        left: 30px;
-        width: calc(100% - 60px);
-        height: 350px;
+        height: 300px;
     }
 
     .hero-description {
-        left: 30px;
-        width: calc(100% - 60px);
-        top: 600px;
-        height: auto;
-    }
-
-    #projects-section .container {
-        width: calc(100% - 60px);
-        margin-left: 30px;
+        font-size: 16px;
     }
 
     .other-projects-title {
         font-size: 36px;
-    }
-
-    #projects-grid {
-        margin: 50px auto;
     }
 
     .project-details {
@@ -491,18 +519,21 @@ header {
         font-size: 22px;
     }
 
-    #cta-container {
-        height: 400px;
+    #cta-question {
+        font-size: 32px;
+        width: 100%;
     }
 
-    #cta-question {
-        font-size: 28px;
+    #cta-subtext {
+        font-size: 18px;
+        width: 100%;
     }
 
     #footer-container {
         flex-direction: column;
         gap: 40px;
         padding: 0 30px;
+        align-items: flex-start;
     }
 
     #footer-links {
@@ -512,85 +543,38 @@ header {
 }
 
 @media (max-width: 576px) {
-    #header-container {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    #header-center {
-        width: 100%;
-    }
-
-    #header-center ul {
-        gap: 15px;
-        justify-content: center;
-    }
-
-    #header-right {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    #contact-btn {
-        width: 100%;
-        max-width: 200px;
-    }
-
     #hero-area {
-        height: 900px; /* Reduced by 100px */
+        padding: 30px 20px;
+        margin: 30px auto 0;
     }
 
     .hero-title {
-        left: 20px;
         font-size: 36px;
-        width: 80%;
     }
 
     .hero-subtitle {
-        left: 20px;
-        top: 80px;
         font-size: 18px;
-        width: 80%;
     }
 
     .hero-date {
-        position: relative;
-        left: 20px;
-        top: 130px;
-        right: auto;
         font-size: 16px;
-        width: 80%;
+        text-align: left;
     }
 
     .hero-image {
-        left: 20px;
-        top: 180px;
-        width: calc(100% - 40px);
-        height: 250px;
+        height: 220px;
     }
 
     .hero-description {
-        left: 20px;
-        width: calc(100% - 40px);
-        top: 450px;
-        height: auto;
         font-size: 14px;
     }
 
     #projects-section .container {
-        width: calc(100% - 40px);
-        margin-left: 20px;
+        margin: 50px auto 0;
     }
 
     .other-projects-title {
         font-size: 30px;
-        width: 100%;
-    }
-
-    #projects-grid {
-        margin: 40px auto;
     }
 
     .projects-container {
@@ -619,8 +603,9 @@ header {
         margin-bottom: 15px;
     }
 
-    #cta-container {
-        height: 350px;
+    #cta-section {
+        padding: 40px 20px;
+        margin: 60px auto 0;
     }
 
     #cta-question {
@@ -639,11 +624,12 @@ header {
 
     #email-input, #cta-subscribe-btn {
         width: 100%;
-        border-radius: 0px;
+        height: 60px;
     }
 
     #footer-section {
         padding: 40px 20px;
+        margin-top: 60px;
     }
 
     #footer-links {
@@ -652,12 +638,16 @@ header {
     }
 
     .footer-column {
-        gap: 10px;
+        gap: 20px;
     }
 }
 
 /* Additional responsive adjustments for very small screens */
 @media (max-width: 375px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
     .project-image {
         height: 200px;
     }
