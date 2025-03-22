@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle - Contact Us</title>
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="header-container">
+            <div id="header-left">
+                <a href="index.html">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </a>
+            </div>
+
+            <nav id="header-center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+
+
+            <div id="header-right">
+                <a href="contact.html"><button id="contact-btn" class="active">Contact Us</button></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="contact-us-section">
+        <h1 id="contact-title">Contact Us</h1>
+
+        <form id="contact-form">
+            <!-- Full Name Field -->
+            <div class="field full-name-field">
+                <label for="full-name">Full Name *</label>
+                <input type="text" id="full-name" placeholder="Enter your full name">
+            </div>
+
+            <!-- Email and Phone Fields Row -->
+            <div class="field-row">
+                <div class="field email-field">
+                    <label for="email">Email </label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="field phone-field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="field message-field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer-section">
+        <div id="footer-container">
+            <!-- Logo and Address -->
+            <div id="footer-content">
+                <div id="footer-logo">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </div>
+                <p id="footer-address">
+                    2972 Westheimer Rd. Santa Ana,<br>
+                    Illinois 85486
+                </p>
+                <p id="footer-copyright">© <span id="copyright-year">2023</span> Circle. All rights reserved.</p>
+            </div>
+
+            <!-- Links -->
+            <div id="footer-links">
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">Team</a></p>
+                    <p class="footer-link"><a href="#">Press</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="services.html">Services</a></p>
+                    <p class="footer-link"><a href="projects.html">Projects</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">About Us</a></p>
+                    <p class="footer-link"><a href="contact.html" class="current-page">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

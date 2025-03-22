@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle - Page Not Found</title>
+    <!-- Include Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .robot-image {
+            max-width: 100%;
+            height: auto;
+            margin: 0 0 20px;
+        }
+
+        .error-title {
+            font-size: 32px;
+            margin: 20px 0;
+            color: #292E47;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #6B708D;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #072AC8;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #0522a5;
+        }
+
+        .error-image {
+            max-width: 100%;
+            height: auto;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .robot-image {
+                width: 220px;
+            }
+
+            .error-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div id="header-container">
+            <!-- Left: Circle Logo -->
+            <div id="header-left">
+                <a href="index.html">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </a>
+            </div>
+
+            <!-- Center: Navigation -->
+            <nav id="header-center">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right: Contact Button -->
+            <div id="header-right">
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 404 Error Section -->
+    <section class="error-container">
+        <img src="images/404-section/404 Robot.png"
+             alt="404 Error - Confused Robot"
+             class="robot-image"
+             style="width: 300px; height: auto;">
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">
+            Oops! The page you are looking for might have been removed, had its name changed,
+            or is temporarily unavailable. Let's get you back on track.
+        </p>
+        <a href="index.html" class="home-button">Back to Homepage</a>
+        <div>
+            <img src="images/logos/circle.svg" alt="Circle Logo" class="error-image" style="width: 200px;">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer-section">
+        <div id="footer-container">
+            <!-- Logo and Address -->
+            <div id="footer-content">
+                <div id="footer-logo">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </div>
+                <p id="footer-address">
+                    2972 Westheimer Rd. Santa Ana,<br>
+                    Illinois 85486
+                </p>
+                <p id="footer-copyright">© <span id="copyright-year">2023</span> Circle. All rights reserved.</p>
+            </div>
+
+            <!-- Links -->
+            <div id="footer-links">
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">Team</a></p>
+                    <p class="footer-link"><a href="#">Press</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="services.html">Services</a></p>
+                    <p class="footer-link"><a href="projects.html">Projects</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">About Us</a></p>
+                    <p class="footer-link"><a href="contact.html">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

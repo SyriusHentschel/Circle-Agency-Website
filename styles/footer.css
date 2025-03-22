@@ -1,0 +1,70 @@
+/* Footer Section */
+#footer-section {
+    background-color: #FFFFFF; /* Ensuring white background for all pages */
+    padding: 60px 20px;
+    margin-top: 200px; /* Added 200px space between content and footer */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-content {
+    max-width: 300px;
+}
+
+#footer-logo {
+    margin-bottom: 20px;
+}
+
+#footer-logo img {
+    height: 30px;
+}
+
+#footer-address {
+    color: #6B708D;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+#footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Extremely increased gap for maximum spacing */
+}
+
+.footer-link {
+    color: #6B708D;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.footer-link a {
+    color: #6B708D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link a.current-page {
+    color: #6B708D;
+    cursor: default;
+    pointer-events: none;
+}
+
+.footer-link:hover,
+.footer-link a:hover {
+    color: #072AC8;
+}

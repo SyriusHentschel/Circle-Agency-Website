@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle - Homepage</title>
+    <!-- Include Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div id="header-container">
+            <!-- Left: Circle Logo -->
+            <div id="header-left">
+                <a href="index.html">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </a>
+            </div>
+
+            <!-- Center: Navigation Menu -->
+            <nav id="header-center">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right: Contact Us Button -->
+            <div id="header-right">
+                <a href="contact.html"><button id="contact-btn">Contact Us</button></a>
+            </div>            
+        </div>
+    </header>
+
+    <!-- Hero Area -->
+    <section id="hero-area">
+        <!-- Group 1 -->
+        <div id="group1">
+            <h1>Empower Your Business With Stunning Design!</h1>
+            <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+            <div id="buttons-container">
+                <a href="contact.html"><button id="get-in-touch">Get in touch</button></a>
+                <a id="see-our-work" href="404.html">See our work</a>
+            </div>
+        </div>
+
+        <!-- Group 2 -->
+        <div id="group2">
+            <img id="hero-image" src="images/hero-section/hero-image.png" alt="Hero Image">
+            <img id="card1" src="images/hero-section/card-1.png" alt="Card 1">
+            <img id="card2" src="images/hero-section/card-2.png" alt="Card 2">
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section id="logos-section">
+        <img id="airbnb-logo" src="images/logos/airbnb-logo.svg" alt="Airbnb Logo">
+        <img id="google-logo" src="images/logos/google-logo.svg" alt="Google Logo">
+        <img id="microsoft-logo" src="images/logos/microsoft-logo.svg" alt="Microsoft Logo">
+        <img id="fedex-logo" src="images/logos/fedex-logo.svg" alt="FedEx Logo">
+        <img id="amazon-logo" src="images/logos/amazon-logo.svg" alt="Amazon Logo">
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section id="recent-projects">
+        <div id="projects-container">
+            <!-- Section Title -->
+            <h3 id="recent-projects-title">Recent Projects</h3>
+
+            <!-- Group Projects Area -->
+            <div id="group-projects">
+                <!-- Simplify Project -->
+                <div class="project">
+                    <img class="project-image" src="images/projects-section/1.jpg" alt="Simplify Project Image">
+                    <h4 class="project-name">Simplify</h4>
+                    <p class="project-type">UI Design & App Development</p>
+                    <a class="project-link" href="projects.html">Learn more</a>
+                </div>
+
+                <!-- Dashcoin Project -->
+                <div class="project">
+                    <img class="project-image" src="images/projects-section/2.jpg" alt="Dashcoin Project Image">
+                    <h4 class="project-name">Dashcoin</h4>
+                    <p class="project-type">Web Development</p>
+                    <a class="project-link" href="#">Learn more</a>
+                </div>
+
+                <!-- Vectorify Project -->
+                <div class="project">
+                    <img class="project-image" src="images/projects-section/3.jpg" alt="Vectorify Project Image">
+                    <h4 class="project-name">Vectorify</h4>
+                    <p class="project-type">User Experience Design</p>
+                    <a class="project-link" href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial-section">
+        <img id="testimonial-image" src="images/testimonial-section/Testimonials.png" alt="Testimonials">
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="our-services">
+        <div id="services-container">
+            <!-- Section Title -->
+            <h3 id="our-services-title">Our Services</h3>
+
+            <!-- Service Box 1: User Interface Design -->
+            <div class="service">
+                <img class="service-icon" src="images/services-section/icons/1.svg" alt="Pen Icon">
+                <h4 class="service-name">User Interface Design</h4>
+                <p class="service-description">
+                    Circle provides you with a stunning user interface design that is accessible to everyone.
+                </p>
+                <a class="service-link" href="services.html">Learn more</a>
+            </div>
+
+            <!-- Service Box 2: User Experience Design -->
+            <div class="service">
+                <img class="service-icon" src="images/services-section/icons/2.svg" alt="Arrow Icon">
+                <h4 class="service-name">User Experience Design</h4>
+                <p class="service-description">
+                    Circle always focuses on delivering the best user experience to your customers.
+                </p>
+                <a class="service-link" href="services.html">Learn more</a>
+            </div>
+
+            <!-- Service Box 3: Application Development -->
+            <div class="service">
+                <img class="service-icon" src="images/services-section/icons/3.svg" alt="Page Icon">
+                <h4 class="service-name">Application Development</h4>
+                <p class="service-description">
+                    We develop high-quality mobile and web applications using the latest technology stack.
+                </p>
+                <a class="service-link" href="services.html">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single CTA Section -->
+    <section id="cta-section">
+        <!-- Container -->
+        <div id="cta-container">
+            <h3 id="cta-question">Do you have any questions?</h3>
+            <p id="cta-subtext">Let us help you!</p>
+            
+            <!-- Input Group -->
+            <form id="cta-input-group">
+                <div class="input-wrapper">
+                    <img src="images/newsletter/mail.svg" alt="Email Icon" class="email-icon" width="30" height="30">
+                    <input type="email" id="email-input" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" id="cta-subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer-section">
+        <div id="footer-container">
+            <!-- Logo and Address -->
+            <div id="footer-content">
+                <div id="footer-logo">
+                    <img src="images/logos/circle.svg" alt="Circle Logo">
+                </div>
+                <p id="footer-address">
+                    2972 Westheimer Rd. Santa Ana,<br>
+                    Illinois 85486
+                </p>
+                <p id="footer-copyright">© <span id="copyright-year">2023</span> Circle. All rights reserved.</p>
+            </div>
+
+            <!-- Links -->
+            <div id="footer-links">
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">Team</a></p>
+                    <p class="footer-link"><a href="#">Press</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="services.html">Services</a></p>
+                    <p class="footer-link"><a href="projects.html">Projects</a></p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-link"><a href="#">About Us</a></p>
+                    <p class="footer-link"><a href="contact.html">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

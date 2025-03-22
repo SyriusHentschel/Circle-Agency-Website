@@ -1,0 +1,785 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+/* Left Section: Circle Logo */
+#header-left {
+    display: flex;
+    align-items: center;
+}
+
+#header-left img {
+    width: 60.53px;
+    height: 18.46px;
+    display: block;
+}
+
+/* Center Section: Navigation Menu */
+#header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#header-center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* This will be overridden by page-specific styles */
+#header-center ul li a.active {
+    color: #072AC8;
+}
+
+#header-center ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#header-center ul li a:hover {
+    text-decoration: underline;
+}
+
+#header-center ul li a:active {
+    color: #072AC8;
+}
+
+/* Right Section: Contact Us Button */
+#header-right {
+    display: flex;
+    align-items: center;
+}
+
+#contact-btn {
+    background-color: #072AC8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-btn.active {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Area Styling */
+#hero-area {
+    width: 100%;
+    max-width: 1440px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Group 1 */
+#group1 {
+    width: 100%;
+    max-width: 530px;
+    margin: 0 auto 40px;
+}
+
+#group1 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #292E47;
+    width: 100%;
+    max-width: 530px;
+    margin: 0 0 20px 0;
+}
+
+#group1 p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #6B708D;
+    width: 100%;
+    max-width: 435px;
+    margin: 0 0 20px 0;
+}
+
+#buttons-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#get-in-touch {
+    background-color: #072AC8;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#get-in-touch:hover {
+    background-color: #0056b3;
+}
+
+#see-our-work {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #6B708D;
+    height: 52px;
+    line-height: 52px;
+}
+
+#see-our-work:hover {
+    text-decoration: underline;
+}
+
+/* Group 2 */
+#group2 {
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Hero Image */
+#hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 615px;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Card 1 */
+#card1 {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 60%;
+    max-width: 340px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px 15px 0px 0px;
+    z-index: 1;
+}
+
+/* Card 2 */
+#card2 {
+    position: absolute;
+    bottom: -150px;
+    right: -40px;
+    width: 60%;
+    max-width: 340px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px 15px 0px 0px;
+    z-index: 2;
+}
+
+/* Logos Section Styling */
+#logos-section {
+    width: 1440px;
+    margin: 200px auto 0 auto;
+    transform: translateX(170px);
+    display: flex;
+    gap: 140px;
+}
+
+/* Recent Projects Section Styling */
+#recent-projects {
+    width: 1440px;
+    height: 561px;
+    margin: 200px auto 0 auto;
+    position: relative;
+}
+
+#projects-container {
+    position: absolute;
+    top: 0;
+    left: 170px;
+    width: 1100px;
+    height: 561px;
+}
+
+#recent-projects-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #292E47;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#group-projects {
+    display: flex;
+    gap: 40px;
+}
+
+.project {
+    width: 340px;
+    height: 444px;
+    position: relative;
+    background-color: white;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.project:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 340px;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #292E47;
+    margin: 20px 0 10px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.project-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #292E47;
+    line-height: 150%;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.project-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px; /* Headline/Regular */
+    font-weight: 400;
+    color: #072AC8; /* Primary/Default */
+    text-decoration: none;
+    text-align: left; /* Aligns the text to the left */
+    position: relative; /* Allows the text to be moved using margins */
+    top: 40px; /* Lowers the "Learn More" text by 80px */
+    margin-left: -200px; /* Moves the text 20px to the left */
+}
+
+.project-link:hover {
+    text-decoration: underline; /* Hover effect */
+}
+
+
+/* Testimonial Section Styling */
+#testimonial-section {
+    width: 1440px;
+    height: 622px;
+    margin: 200px auto 0 auto;
+    position: relative;
+}
+
+#testimonial-image {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 1320px;
+    height: 622px;
+    object-fit: cover;
+}
+
+/* Our Services Section Styling */
+#our-services {
+    width: 1440px; /* Frame width */
+    height: 561px; /* Frame height */
+    margin: 200px auto 0 auto; /* Positioned below Testimonials */
+    background-color: #FFFFFF; /* White background */
+    position: relative;
+}
+
+/* Title Styling */
+#our-services-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px; /* H3 size */
+    font-weight: 700;
+    color: #292E47; /* Neutral/Dark */
+    position: absolute;
+    top: -140px; /* Y: 0 */
+    left: 0px; /* X: 170 */
+    width: 285px; /* Title width */
+    height: 47px; /* Title height */
+}
+
+/* Services Container */
+#services-container {
+    position: absolute;
+    top: 117px; /* Y: 117 */
+    left: 170px; /* X: 170 */
+    width: 1100px; /* Group area width */
+    height: 497px; /* Group area height */
+    display: flex; /* Align boxes horizontally */
+    justify-content: space-between; /* Adds proper spacing */
+    gap: 70px; /* Space between boxes */
+}
+
+/* Individual Service Boxes */
+.service {
+    width: 340px; /* Box width */
+    height: 320px; /* Box height */
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border */
+    border-radius: 0; /* Changed to 0 for squared corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align all content to the left */
+    padding: 20px;
+    transition: all 0.4s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for service boxes */
+.service:hover {
+    transform: translateY(-15px); /* Lift effect on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Service Icon Styling */
+.service-icon {
+    display: block; /* Ensures the icon behaves like a block element */
+    width: 40px; /* Adjust size as necessary */
+    height: 40px; /* Adjust size as necessary */
+    margin-bottom: 10px; /* Space below the icon */
+    object-fit: contain; /* Ensures proper scaling */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service:hover .service-icon {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Box Title Styling */
+.service-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Body/Medium */
+    font-weight: 500;
+    color: #292E47; /* Neutral/Dark */
+    margin-bottom: 10px; /* Space below the title */
+    text-align: left; /* Aligns the title to the left */
+}
+
+/* Box Description Styling */
+.service-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Body/Regular */
+    font-weight: 400;
+    color: #6B708D; /* Neutral/Medium */
+    line-height: 150%;
+    text-align: left; /* Aligns the description to the left */
+    margin-bottom: 20px; /* Space below the description */
+}
+
+/* Learn More Link Styling */
+.service-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px; /* Headline/Regular */
+    font-weight: 500;
+    color: #072AC8; /* Primary/Default */
+    text-decoration: none;
+    text-align: left; /* Aligns the text to the left */
+    margin-top: 30px; /* Adds space above the link */
+    margin-left: 0px; /* Keeps the link aligned with other content */
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #072AC8;
+    transition: width 0.3s ease;
+}
+
+.service-link:hover {
+    color: #0522a5;
+}
+
+.service-link:hover::after {
+    width: 100%;
+}
+
+/* CTA Section Styling */
+#cta-section {
+    position: relative;
+    width: 1320px;
+    height: 500px;
+    margin: 200px auto 0 auto; /* Positioned 200px under the previous section */
+    background: #FFC600; /* Yellow Background */
+}
+
+/* Container */
+#cta-container {
+    position: absolute;
+    width: 1100px;
+    height: 227px;
+    left: calc(50% - 1100px / 2); /* Centers the container horizontally */
+    top: 136px;
+}
+
+/* Question Title */
+#cta-question {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    color: #292E47;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center; /* Centers the text */
+}
+
+/* Subtext */
+#cta-subtext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #292E47;
+    width: 500px;
+    margin: 20px auto;
+    text-align: center; /* Centers the text */
+}
+
+/* Input Group */
+#cta-input-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Input Wrapper for Email Icon and Input */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 393px;
+    background: #F4F6FC;
+    border: 1.25px solid #292E47;
+    border-radius: 5px;
+}
+
+.email-icon {
+    position: absolute;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    display: block;
+}
+
+/* Email Input Box */
+#email-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 15px 15px 15px 55px; /* Adjusted left padding for smaller icon */
+    border: none;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #292E47;
+    border-radius: 5px;
+}
+
+/* Subscribe Button */
+#cta-subscribe-btn {
+    width: 198px;
+    height: 80px;
+    background: #072AC8; /* Primary/Default Blue */
+    color: #FFFFFF; /* White Text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Smooth corners */
+}
+
+#cta-subscribe-btn:hover {
+    background: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Footer Section */
+#footer-section {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    margin-top: 200px; /* Added 200px space between CTA and footer */
+}
+
+#footer-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 112px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer-logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #072AC8; /* Primary/Default */
+}
+
+#footer-logo img {
+    width: 98.38px;
+    height: 30px;
+    display: block;
+}
+
+#footer-address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #6B708D; /* Neutral/Medium */
+    margin-top: 20px;
+}
+
+#footer-copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #292E47; /* Darker color for better visibility */
+    margin-top: 10px;
+}
+
+/* Links Section */
+#footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6B708D;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-link a {
+    color: #6B708D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link a.current-page {
+    color: #6B708D;
+    cursor: default;
+    pointer-events: none;
+}
+
+.footer-link:hover,
+.footer-link a:hover {
+    color: #072AC8; /* Primary/Default on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #group1 h1 {
+        font-size: 50px;
+    }
+
+    #group1 p {
+        font-size: 18px;
+    }
+
+    #hero-area {
+          }
+}
+
+@media (max-width: 992px) {
+    #header-container, #footer-container {
+    width: 1100%;
+    min-height: 112px;
+
+        padding: 30px 20px;
+    }
+
+    #group1 h1 {
+        font-size: 45px;
+    }
+
+    #group1, #group2 {
+        max-width: 100%;
+    }
+
+    #hero-image {
+        max-width: 100%;
+    }
+
+    #card1, #card2 {
+        max-width: 280px;
+    }
+
+    #footer-links {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #group1 h1 {
+        font-size: 40px;
+    }
+
+    #group1 p {
+        font-size: 16px;
+    }
+
+    #header-center ul {
+        gap: 10px;
+    }
+
+    #header-center ul li a {
+        font-size: 15px;
+    }
+
+    #contact-btn {
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+
+    #card1, #card2 {
+        max-width: 220px;
+    }
+
+    #footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #footer-content {
+        align-items: center;
+    }
+
+    #footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    #header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    #header-center {
+        margin: 15px 0;
+    }
+
+    #group1 h1 {
+        font-size: 32px;
+    }
+
+    #buttons-container {
+        justify-content: center;
+    }
+
+    #card1, #card2 {
+        display: none;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
+
