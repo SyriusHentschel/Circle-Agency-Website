@@ -101,7 +101,7 @@ function createProjectElement(project) {
     projectDiv.appendChild(img);
     projectDiv.appendChild(name);
     projectDiv.appendChild(type);
-    projectDiv.appendChild(link);
+    projectDiv.appendChild(link); // Make sure the link is appended
 
     return projectDiv;
 }

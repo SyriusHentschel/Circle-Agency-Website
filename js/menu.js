@@ -1,65 +1,47 @@
 // Responsive menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-    // Create a menu toggle button for mobile
-    const headerContainer = document.getElementById('header-container');
+    // Get existing menu toggle button and navigation
+    const menuToggle = document.getElementById('menu-toggle');
     const headerCenter = document.getElementById('header-center');
-    
-    if (headerContainer && headerCenter) {
-        // Create the menu toggle button
-        const menuToggle = document.createElement('button');
-        menuToggle.id = 'menu-toggle';
-        menuToggle.innerHTML = '☰';
-        menuToggle.style.display = 'none'; // Hide by default (will show in mobile view)
-        
-        // Add styles for the menu toggle
-        const style = document.createElement('style');
-        style.textContent = `
-            #menu-toggle {
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: #072AC8;
-                display: none;
-            }
-            
-            @media (max-width: 768px) {
-                #menu-toggle {
-                    display: block;
-                }
-                
-                #header-center {
-                    width: 100%;
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: max-height 0.3s ease;
-                }
-                
-                #header-center.active {
-                    max-height: 200px;
-                }
-                
-                #header-center ul {
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 10px 0;
-                }
-                
-                #header-container {
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                }
-            }
-        `;
-        
-        document.head.appendChild(style);
-        
-        // Insert the toggle button before the navigation
-        headerContainer.insertBefore(menuToggle, headerCenter);
-        
-        // Add click event to toggle the menu
-        menuToggle.addEventListener('click', function() {
+    const navLinks = document.querySelectorAll('#header-center a');
+
+    if (menuToggle && headerCenter) {
+        console.log("Menu elements found:", { menuToggle, headerCenter });
+
+        // Toggle menu when hamburger is clicked
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
             headerCenter.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            console.log("Menu toggled, active state:", headerCenter.classList.contains('active'));
         });
+
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                headerCenter.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                console.log("Menu closed via link click");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (
+                headerCenter.classList.contains('active') &&
+                !headerCenter.contains(e.target) &&
+                e.target !== menuToggle &&
+                !menuToggle.contains(e.target)
+            ) {
+                headerCenter.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                console.log("Menu closed via outside click");
+            }
+        });
+    } else {
+        console.error("Menu elements not found:", { menuToggle, headerCenter });
     }
 });

@@ -1,9 +1,40 @@
 /* General Reset */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* When mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Overlay when menu is open */
+body.menu-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none; /* Hidden by default, shown in media query */
 }
 
 /* Header Styling */
@@ -15,6 +46,8 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    box-sizing: border-box;
 }
 
 #header-container {
@@ -77,32 +110,61 @@ header {
     color: #072AC8;
 }
 
+/* Hamburger Menu Button */
+#menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+    outline: none;
+}
+
+#menu-toggle:focus {
+    outline: none;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #072AC8;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Mobile-only elements */
+.mobile-only {
+    display: none;
+}
+
 /* Right Section: Contact Us Button */
 #header-right {
     display: flex;
     align-items: center;
 }
 
-#contact-btn {
+/* Contact button styles moved to a common class */
+.contact-button {
+    display: inline-block;
     background-color: #072AC8;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: 500;
-    border-radius: 0;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#contact-btn.active {
+.contact-button.active {
     background-color: #0056b3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#contact-btn:hover {
-    background-color: #0056b3;
+.contact-button:hover {
+    background-color: #0522a5;
 }
 
 /* Hero Area Styling */
@@ -231,27 +293,69 @@ header {
 
 /* Logos Section Styling */
 #logos-section {
-    width: 1440px;
-    margin: 200px auto 0 auto;
-    transform: translateX(170px);
+    width: 100%;
+    max-width: 1440px;
+    margin: 100px auto 0 auto;
+    padding: 0 20px;
     display: flex;
-    gap: 140px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+/* Logo Animation Styles */
+#airbnb-logo, #google-logo, #microsoft-logo, #fedex-logo, #amazon-logo {
+    will-change: opacity, filter, transform;
+    opacity: 0;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); /* Safari support */
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes logoPulse {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
 }
 
 /* Recent Projects Section Styling */
 #recent-projects {
-    width: 1440px;
-    height: 561px;
-    margin: 200px auto 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 100px auto 0 auto;
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 #projects-container {
-    position: absolute;
-    top: 0;
-    left: 170px;
-    width: 1100px;
-    height: 561px;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
 }
 
 #recent-projects-title {
@@ -265,12 +369,15 @@ header {
 
 #group-projects {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+    justify-content: center;
 }
 
 .project {
-    width: 340px;
-    height: 444px;
+    width: 100%;
+    max-width: 340px;
+    height: 400px; /* Fixed height to ensure consistent positioning */
     position: relative;
     background-color: white;
     border-radius: 0;
@@ -278,6 +385,7 @@ header {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
+    margin-bottom: 30px;
 }
 
 .project:hover {
@@ -286,8 +394,9 @@ header {
 }
 
 .project-image {
-    width: 340px;
-    height: 240px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 340/240;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -314,6 +423,7 @@ header {
     line-height: 150%;
     text-align: left;
     padding-left: 25px;
+    margin-bottom: 60px; /* Add space below for the link */
 }
 
 .project-link {
@@ -323,80 +433,88 @@ header {
     color: #072AC8; /* Primary/Default */
     text-decoration: none;
     text-align: left; /* Aligns the text to the left */
-    position: relative; /* Allows the text to be moved using margins */
-    top: 40px; /* Lowers the "Learn More" text by 80px */
-    margin-left: -200px; /* Moves the text 20px to the left */
+    position: absolute; /* Position absolutely within the project card */
+    bottom: 25px; /* Position from bottom */
+    left: 25px; /* Position from left */
+    transition: color 0.3s ease;
 }
 
 .project-link:hover {
+    color: #0522a5;
     text-decoration: underline; /* Hover effect */
 }
 
 
 /* Testimonial Section Styling */
 #testimonial-section {
-    width: 1440px;
-    height: 622px;
-    margin: 200px auto 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 100px auto 0 auto;
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 #testimonial-image {
-    position: absolute;
-    top: 0;
-    left: 40px;
-    width: 1320px;
-    height: 622px;
+    width: 100%;
+    max-width: 1320px;
+    height: auto;
+    aspect-ratio: 1320/622;
     object-fit: cover;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Our Services Section Styling */
 #our-services {
-    width: 1440px; /* Frame width */
-    height: 561px; /* Frame height */
-    margin: 200px auto 0 auto; /* Positioned below Testimonials */
-    background-color: #FFFFFF; /* White background */
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: 100px auto 0 auto;
+    background-color: #FFFFFF;
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Title Styling */
 #our-services-title {
     font-family: 'Roboto', sans-serif;
-    font-size: 40px; /* H3 size */
+    font-size: 40px;
     font-weight: 700;
-    color: #292E47; /* Neutral/Dark */
-    position: absolute;
-    top: -140px; /* Y: 0 */
-    left: 0px; /* X: 170 */
-    width: 285px; /* Title width */
-    height: 47px; /* Title height */
+    color: #292E47;
+    margin: 0 auto 40px;
+    width: 100%;
+    max-width: 1100px;
 }
 
 /* Services Container */
 #services-container {
-    position: absolute;
-    top: 117px; /* Y: 117 */
-    left: 170px; /* X: 170 */
-    width: 1100px; /* Group area width */
-    height: 497px; /* Group area height */
-    display: flex; /* Align boxes horizontally */
-    justify-content: space-between; /* Adds proper spacing */
-    gap: 70px; /* Space between boxes */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Individual Service Boxes */
 .service {
-    width: 340px; /* Box width */
-    height: 320px; /* Box height */
-    background-color: #FFFFFF; /* White background */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Border */
-    border-radius: 0; /* Changed to 0 for squared corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    width: 100%;
+    max-width: 340px;
+    min-height: 320px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: flex-start; /* Align all content to the left */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    transition: all 0.4s ease; /* Smooth transition for hover effects */
+    transition: all 0.4s ease;
+    margin-bottom: 30px;
 }
 
 /* Hover effect for service boxes */
@@ -478,19 +596,24 @@ header {
 /* CTA Section Styling */
 #cta-section {
     position: relative;
-    width: 1320px;
-    height: 500px;
-    margin: 200px auto 0 auto; /* Positioned 200px under the previous section */
-    background: #FFC600; /* Yellow Background */
+    width: 100%;
+    max-width: 1320px;
+    min-height: 500px;
+    margin: 100px auto 0 auto;
+    background: #FFC600;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Container */
 #cta-container {
-    position: absolute;
-    width: 1100px;
-    height: 227px;
-    left: calc(50% - 1100px / 2); /* Centers the container horizontally */
-    top: 136px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Question Title */
@@ -498,11 +621,12 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     font-weight: 700;
-    line-height: 47px;
+    line-height: 1.2;
     color: #292E47;
-    width: 500px;
-    margin: 0 auto;
-    text-align: center; /* Centers the text */
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    text-align: center;
 }
 
 /* Subtext */
@@ -510,11 +634,12 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.5;
     color: #292E47;
-    width: 500px;
-    margin: 20px auto;
-    text-align: center; /* Centers the text */
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    text-align: center;
 }
 
 /* Input Group */
@@ -524,6 +649,10 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Input Wrapper for Email Icon and Input */
@@ -531,10 +660,13 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    width: 393px;
+    width: 100%;
+    max-width: 393px;
+    flex: 1;
     background: #F4F6FC;
     border: 1.25px solid #292E47;
     border-radius: 5px;
+    min-width: 200px;
 }
 
 .email-icon {
@@ -579,99 +711,21 @@ header {
     background: #0056b3; /* Darker Blue on Hover */
 }
 
-/* Footer Section */
-#footer-section {
-    background-color: #FFFFFF;
-    padding: 60px 20px;
-    margin-top: 200px; /* Added 200px space between CTA and footer */
-}
-
-#footer-container {
-    width: 100%;
-    max-width: 1100px;
-    min-height: 112px;
-    margin: 30px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#footer-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#footer-logo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #072AC8; /* Primary/Default */
-}
-
-#footer-logo img {
-    width: 98.38px;
-    height: 30px;
-    display: block;
-}
-
-#footer-address {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 150%;
-    color: #6B708D; /* Neutral/Medium */
-    margin-top: 20px;
-}
-
-#footer-copyright {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: #292E47; /* Darker color for better visibility */
-    margin-top: 10px;
-}
-
-/* Links Section */
-#footer-links {
-    display: flex;
-    gap: 40px;
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-link {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: #6B708D;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.footer-link a {
-    color: #6B708D;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-link a.current-page {
-    color: #6B708D;
-    cursor: default;
-    pointer-events: none;
-}
-
-.footer-link:hover,
-.footer-link a:hover {
-    color: #072AC8; /* Primary/Default on hover */
-}
+/* All footer styles are now in footer.css */
 
 /* Responsive Design */
+@media (max-width: 1440px) {
+    /* Fix container widths */
+    #logos-section, #recent-projects, #testimonial-section, #our-services, #cta-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        transform: none;
+    }
+}
+
 @media (max-width: 1200px) {
     #group1 h1 {
         font-size: 50px;
@@ -682,16 +736,11 @@ header {
     }
 
     #hero-area {
-          }
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 992px) {
-    #header-container, #footer-container {
-    width: 1100%;
-    min-height: 112px;
-
-        padding: 30px 20px;
-    }
 
     #group1 h1 {
         font-size: 45px;
@@ -709,9 +758,7 @@ header {
         max-width: 280px;
     }
 
-    #footer-links {
-        gap: 40px;
-    }
+    /* Footer styles moved to footer.css */
 }
 
 @media (max-width: 768px) {
@@ -722,49 +769,9 @@ header {
     #group1 p {
         font-size: 16px;
     }
-
-    #header-center ul {
-        gap: 10px;
-    }
-
-    #header-center ul li a {
-        font-size: 15px;
-    }
-
-    #contact-btn {
-        padding: 8px 15px;
-        font-size: 15px;
-    }
-
-    #card1, #card2 {
-        max-width: 220px;
-    }
-
-    #footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    #footer-content {
-        align-items: center;
-    }
-
-    #footer-links {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 576px) {
-    #header-container {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-
-    #header-center {
-        margin: 15px 0;
-    }
 
     #group1 h1 {
         font-size: 32px;
@@ -778,8 +785,6 @@ header {
         display: none;
     }
 
-    .footer-column {
-        text-align: center;
-    }
+    /* Footer styles moved to footer.css */
 }
 

@@ -2,7 +2,7 @@
 #footer-section {
     background-color: #FFFFFF; /* Ensuring white background for all pages */
     padding: 60px 20px;
-    margin-top: 200px; /* Added 200px space between content and footer */
+    margin-top: 100px; /* Consistent space between content and footer */
     width: 100%;
     box-sizing: border-box;
 }
@@ -12,10 +12,12 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #footer-content {
     max-width: 300px;
+    margin-bottom: 30px;
 }
 
 #footer-logo {
@@ -33,6 +35,13 @@
     font-size: 17px;
 }
 
+#footer-copyright {
+    margin-top: 20px;
+    color: #6B708D;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
 #footer-links {
     display: flex;
     gap: 60px;
@@ -41,7 +50,7 @@
 .footer-column {
     display: flex;
     flex-direction: column;
-    gap: 50px; /* Extremely increased gap for maximum spacing */
+    gap: 30px; /* Reduced gap for better spacing */
 }
 
 .footer-link {
@@ -67,4 +76,42 @@
 .footer-link:hover,
 .footer-link a:hover {
     color: #072AC8;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    #footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #footer-content {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    #footer-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #footer-section {
+        padding: 40px 20px;
+        margin-top: 60px;
+    }
+
+    #footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        gap: 15px;
+    }
 }

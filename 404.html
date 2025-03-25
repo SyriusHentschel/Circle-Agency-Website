@@ -8,18 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/mobile.css">
     <style>
         .error-container {
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
         }
 
-        .robot-image {
+        .error-image {
             max-width: 100%;
             height: auto;
-            margin: 0 0 20px;
+            margin: 0 auto 30px;
+            display: block;
+            border-radius: 8px;
         }
 
         .error-title {
@@ -43,11 +51,21 @@
             border-radius: 4px;
             text-decoration: none;
             font-weight: 500;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(7, 42, 200, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .home-button:hover {
             background-color: #0522a5;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(7, 42, 200, 0.3);
+        }
+
+        .home-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(7, 42, 200, 0.2);
         }
 
         .error-image {
@@ -57,14 +75,21 @@
         }
 
         @media (max-width: 768px) {
-            .robot-image {
-                width: 220px;
+            .error-image {
+                max-width: 90%;
             }
 
             .error-title {
                 font-size: 24px;
             }
+
+            .error-message {
+                font-size: 16px;
+                padding: 0 15px;
+            }
         }
+
+        /* Mobile styles moved to mobile.css */
     </style>
 </head>
 <body>
@@ -96,17 +121,18 @@
 
     <!-- 404 Error Section -->
     <section class="error-container">
-        <img src="images/404-section/404 Robot.png"
-             alt="404 Error - Confused Robot"
-             class="robot-image"
-             style="width: 300px; height: auto;">
+        <img src="images/404-section/Art error 404.gif"
+             alt="404 Error - Art Error Animation"
+             class="error-image"
+             style="width: 100%; max-width: 500px; height: auto;">
         <h2 class="error-title">Page Not Found</h2>
         <p class="error-message">
-            Oops! The page you are looking for might have been removed, had its name changed,
-            or is temporarily unavailable. Let's get you back on track.
+            Oops! It seems the page you're looking for has been painted out of existence.
+            Our digital artists couldn't find this masterpiece in our gallery.
+            Please check the URL or return to our homepage to explore our collection.
         </p>
         <a href="index.html" class="home-button">Back to Homepage</a>
-        <div>
+        <div style="margin-top: 40px;">
             <img src="images/logos/circle.svg" alt="Circle Logo" class="error-image" style="width: 200px;">
         </div>
     </section>
