@@ -46,14 +46,20 @@ This project is a multi-page website for Circle, featuring:
 ## Technologies Used
 
 - **HTML5**: Semantic markup for structure
-- **CSS3**: Styling with flexbox for layout
+- **CSS3**:
+  - Styling with flexbox for layout
+  - Modular CSS organization with separate files for components and pages
+  - Media queries for responsive design
 - **JavaScript**:
   - DOM manipulation and form validation
   - Fetch API for retrieving project data
   - Dynamic content creation
+  - Animation effects
 - **External API**: Projects data from Ironhack API
 - **Git**: Version control
+- **GitHub**: Repository hosting and collaboration
 - **Netlify**: Deployment platform
+- **Animated GIFs**: Custom animations for enhanced user experience
 
 ## Setup and Deployment
 
@@ -68,21 +74,36 @@ The site is deployed on Netlify and can be accessed at [your-netlify-url].
 
 ```
 ├── index.html          # Homepage
+├── projects.html       # Projects overview page
 ├── projects/
 │   └── 1.html          # Project detail page for project with UUID 1
 ├── services.html       # Services page
 ├── contact.html        # Contact page
 ├── 404.html            # Custom 404 error page
-├── Styles/
-│   └── styles.css      # Main stylesheet
+├── styles/
+│   ├── styles.css      # Main stylesheet
+│   ├── projects.css    # Projects page styles
+│   ├── services.css    # Services page styles
+│   ├── contact.css     # Contact page styles
+│   ├── footer.css      # Footer component styles
+│   └── mobile.css      # Responsive design styles
 ├── js/
 │   ├── main.js         # Main JavaScript functionality
 │   ├── projects.js     # Project fetching and display functionality
 │   ├── form-validation.js # Form validation functionality
 │   └── menu.js         # Responsive menu functionality
-├── assets/
+├── scripts/
+│   ├── scripts.js      # General site scripts
+│   └── logo-animations.js # Logo animation functionality
+├── images/
 │   ├── logos/          # Logo images
-│   └── images/         # Site images
+│   ├── hero-section/   # Hero section images
+│   ├── projects-section/ # Project images
+│   ├── services-section/ # Services images
+│   ├── testimonial-section/ # Testimonial images
+│   ├── newsletter/     # Newsletter section images
+│   ├── contact-section/ # Contact page images
+│   └── 404-section/    # 404 page images including error animation
 └── README.md           # Project documentation
 ```
 
@@ -106,6 +127,8 @@ Each breakpoint has specific optimizations for layout, typography, and interacti
 - **Responsive Menu**: Toggles mobile navigation menu with hamburger icon
 - **Random Project Selection**: Displays random related projects on the project detail page
 - **Dynamic Form Creation**: Wraps CTA section elements in a form for proper validation
+- **Logo Animations**: Custom animations for the agency logo using the logo-animations.js script
+- **Dynamic Copyright Year**: Automatically updates the copyright year in the footer
 
 ## API Integration
 
@@ -119,6 +142,11 @@ The website integrates with the Ironhack Projects API to dynamically display pro
   - Handles API errors gracefully with user notifications
 
 ## Recent Updates
+
+### 404 Page Enhancement (July 2024)
+- Added animated GIF for a more engaging 404 error page
+- Improved visual feedback for users who encounter missing pages
+- Enhanced user experience with custom error animation
 
 ### Contact Page Improvements (June 2024)
 - Enhanced mobile and tablet responsiveness for the contact form
