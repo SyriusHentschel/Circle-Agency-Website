@@ -22,57 +22,7 @@ body {
 
 /* Removed mobile menu styles to match homepage */
 
-/* Header Styles */
-header {
-    background-color: #FFFFFF;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-#header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: relative;
-}
-
-#header-left img {
-    height: 30px;
-}
-
-/* Hamburger menu removed to match homepage style */
-
-#header-center ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-}
-
-#header-center a {
-    text-decoration: none;
-    color: #6B708D;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-#header-center a.active {
-    color: #072AC8;
-}
-
-#header-center a:hover {
-    color: #072AC8;
-}
-
-/* Mobile-specific styles moved to mobile.css */
-
-/* Contact button styles are now in styles.css */
+/* Header styles moved to header.css */
 
 /* Hero Area */
 #hero-area {

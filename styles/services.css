@@ -1,26 +1,7 @@
 /* Import base styles */
 @import url('styles.css');
 
-/* Contact Button Styles */
-.contact-button {
-    display: inline-block;
-    background-color: #072AC8;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.contact-button:hover {
-    background-color: #0522a5;
-}
-
-.contact-button.active {
-    background-color: #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+/* Contact Button Styles moved to header.css */
 
 /* Services Hero Section */
 #services-hero {
