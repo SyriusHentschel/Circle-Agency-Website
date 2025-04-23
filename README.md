@@ -5,7 +5,7 @@
  | | | |   | (_) | | | || | | | (_| | (__|   <
 |___||_|    \___/|_| |_||_| |_|\__,_|\___|_|\_\
 
-      Circle Agency Website Mid-Term Project
+ Circle Agency Website Mid-Term Project - Victor Valerio (SH)
 ```
 
 # Circle Agency Website
