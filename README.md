@@ -68,7 +68,7 @@ This project is a multi-page website for Circle, featuring:
 2. Open any HTML file in your browser to view the site locally
 
 ### Deployment
-The site is deployed on Netlify and can be accessed at [your-netlify-url].
+The site is deployed on Netlify and can be accessed at [https://shcircle-agency.netlify.app](https://shcircle-agency.netlify.app/).
 
 ## Project Structure
 
